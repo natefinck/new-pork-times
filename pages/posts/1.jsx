@@ -13,11 +13,11 @@ export default function FirstPost() {
                         Companies waging battle on crops as food vs fuel
                     </h1>
                     <div className={blogStyles.summaryContainer}>
+                        <div className={blogStyles.headImage}>
+                            <Image src={img1}></Image>
+                        </div>
                         <div className={blogStyles.content}>
                             Food or fuel? Food companies are waging a battle in the fields, in laboratories and in the halls of government over how to use corn as demand for the grain and other food ingredients surges for use in ethanol and other biofuels.
-                        </div>
-                        <div className={blogStyles.headImage}>
-                            {/* <Image src={img1}></Image> */}
                         </div>
                         <div className={blogStyles.details}>
                             <div className={blogStyles.leftDetails}>

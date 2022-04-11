@@ -6,6 +6,10 @@
     height: 500px;
 }
 
+.headImage {
+    display: none;
+}
+
 .article {
     width: 100%;
     max-width: 800px;
@@ -55,3 +59,27 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .article {
+        margin-top: 3rem;
+
+        .headlineContainer {
+    
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .heroImage {
+        display: none;
+    }
+
+    .headImage {
+        display: block;
+
+        img {
+            // z-index: -1;
+        }
+    }
+}
