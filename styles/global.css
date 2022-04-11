@@ -5,8 +5,15 @@ body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
+    font-size: 16pt;
 }
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --main-light-gray: #f0f0f0;
+  --main-middle-gray: #adadad;
+  --main-dark-gray: #595959;
 }

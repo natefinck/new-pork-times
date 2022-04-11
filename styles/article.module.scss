@@ -6,13 +6,29 @@
 }
 
 .headlineContainer {
+    border-bottom: 1px solid var(--main-middle-gray);
+    padding-bottom: 1rem;
 
     h1 {
-        font-size: 4.8rem;
-        font-family: 'Berkshire Swash', cursive;
+        font-size: 4rem;
+        font-family: 'Berkshire Swash', 'Open Sans';
+        margin: 2rem 0px;
     }
 
-    .summary {
-        
+    .summaryContainer {
+        color: var(--main-dark-gray);
+
+        .details {
+            font-size: .6rem;
+            padding: .5rem 0;
+            display: flex;
+            justify-content: space-between;
+
+            .rightDetails {
+                font-size: .8rem;
+                background-color: var(--main-light-gray);
+                padding: 0.4rem;
+            }
+        }
     }
 }
