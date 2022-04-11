@@ -1,6 +1,7 @@
 import styles from '../styles/header.module.scss'
 import Image from 'next/image'
 import logo from '../images/logo.svg'
+import Link from 'next/link'
 
 export default function Header() {
     return (
@@ -13,7 +14,7 @@ export default function Header() {
             </div>
             <div className={styles.navContainer}>
                 <ul>
-                    <li>Home</li>
+                    <li><Link href="/"><a>Home</a></Link></li>
                     <li>About</li>
                     <li>Posts</li>
                 </ul>

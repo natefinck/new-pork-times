@@ -17,3 +17,8 @@ body {
   --main-middle-gray: #adadad;
   --main-dark-gray: #595959;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}

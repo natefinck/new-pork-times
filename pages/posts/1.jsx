@@ -4,7 +4,7 @@ import blogStyles from '../../styles/article.module.scss'
 export default function FirstPost() {
     return (
         <div>
-            <Header></Header>
+
             <div className={blogStyles.article}>
                 <div className={blogStyles.headlineContainer}>
                     <h1>
