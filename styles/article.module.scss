@@ -1,34 +1,57 @@
+.heroImage {
+    background-image: url('../images/blog1/corn.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
 .article {
     width: 100%;
     max-width: 800px;
     padding: 1rem;
     margin: 0 auto;
-}
+    margin-top: -5rem;
+    background-color: var(--main-background);
 
-.headlineContainer {
-    border-bottom: 1px solid var(--main-middle-gray);
-    padding-bottom: 1rem;
+    .headlineContainer {
+        border-bottom: 1px solid var(--main-middle-gray);
+        padding-bottom: 1rem;
 
-    h1 {
-        font-size: 4rem;
-        font-family: 'Berkshire Swash', 'Open Sans';
-        margin: 2rem 0px;
-    }
+        h1 {
+            font-size: 4rem;
+            font-family: 'Berkshire Swash', 'Open Sans';
+            margin: 0 0 2rem 0;
+        }
 
-    .summaryContainer {
-        color: var(--main-dark-gray);
+        .summaryContainer {
+            color: var(--main-dark-gray);
 
-        .details {
-            font-size: .6rem;
-            padding: .5rem 0;
-            display: flex;
-            justify-content: space-between;
+            .details {
+                font-size: .6rem;
+                padding: .5rem 0;
+                display: flex;
+                justify-content: space-between;
 
-            .rightDetails {
-                font-size: .8rem;
-                background-color: var(--main-light-gray);
-                padding: 0.4rem;
+                .rightDetails {
+                    font-size: .8rem;
+                    background-color: var(--main-light-gray);
+                    padding: 0.4rem;
+                }
             }
+
+            // .headImage img {
+            //     // height: 300px !important;
+            //     padding: 1rem;
+            // }
         }
     }
+
+    .articleContent {
+
+        .heading2 {
+            font-weight: bold;
+          }
+    }
 }
+
