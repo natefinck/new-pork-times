@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import styles from '../styles/index.module.scss'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -6,11 +8,18 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 className={styles.title}>
+          Learn <a href="https://nextjs.org">Next.js!</a>
+        </h1>
+
+        <h1 className={styles.title}>
+          Check out our first <Link href="/posts/1"><a>article</a></Link>!
         </h1>
 
         <p className="description">
@@ -187,21 +196,6 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </div>
