@@ -1,26 +1,26 @@
 import Header from '../../components/header'
-import blogStyles from '../../styles/article.module.scss'
+import articleStyles from '../../styles/article.module.scss'
 import Image from 'next/image'
 import img1 from '../../images/blog1/corn.jpeg'
 
 export default function FirstPost() {
     return (
         <div>
-            <div className={blogStyles.heroImage}></div>
-            <div className={blogStyles.article}>
-                <div className={blogStyles.headlineContainer}>
+            <div className={articleStyles.heroImage}></div>
+            <div className={articleStyles.article}>
+                <div className={articleStyles.headlineContainer}>
                     <h1>
                         Companies waging battle on crops as food vs fuel
                     </h1>
-                    <div className={blogStyles.summaryContainer}>
-                        <div className={blogStyles.headImage}>
+                    <div className={articleStyles.summaryContainer}>
+                        <div className={articleStyles.headImage}>
                             <Image src={img1}></Image>
                         </div>
-                        <div className={blogStyles.content}>
+                        <div className={articleStyles.content}>
                             Food or fuel? Food companies are waging a battle in the fields, in laboratories and in the halls of government over how to use corn as demand for the grain and other food ingredients surges for use in ethanol and other biofuels.
                         </div>
-                        <div className={blogStyles.details}>
-                            <div className={blogStyles.leftDetails}>
+                        <div className={articleStyles.details}>
+                            <div className={articleStyles.leftDetails}>
                                 <div>
                                     By Brad Dorfman
                                 </div>
@@ -28,13 +28,13 @@ export default function FirstPost() {
                                     March 9, 2007
                                 </div>
                             </div>
-                            <div className={blogStyles.rightDetails}>
+                            <div className={articleStyles.rightDetails}>
                                 4 MIN READ
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className={blogStyles.articleContent}>
+                <div className={articleStyles.articleContent}>
                     <p>The demand for corn has driven up costs and cut into earnings, and executives at the Reuters Food Summit in Chicago this week said they do not expect corn prices to retreat from recent 10-year highs any time soon.</p>
 
                     <p>As the tug of war over how to use corn intensifies, food industry executives say economic fundamentals are shifting.</p>
@@ -49,8 +49,8 @@ export default function FirstPost() {
 
                     <p>“From a farm policy and a farm bill this year, we need to make sure that there is enough corn for food,” Bond said. Tyson buys corn to feed livestock.</p>
 
-                    <div className={blogStyles.heading2}>
-                        FAT TO FUEL
+                    <div className={articleStyles.heading2}>
+                        <h2>FAT TO FUEL</h2>
                     </div>
 
                     <p>Tyson, which expects rising corn prices to increase its costs by $330 million this year, is also looking to develop biofuel, which would be made from some of the 2.3 billion pounds of animal fat it produces each year.</p>
