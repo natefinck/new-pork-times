@@ -7,7 +7,7 @@ import Hamburger from './hamburgerMenu'
 
 export default function Header() {
 
-    const [menuOpen, setMenuOpen] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -43,7 +43,7 @@ export default function Header() {
     return (
         <>
             <div className={styles.headerContainer}>
-                <div className={styles.logoContainer}>
+            <div className={styles.logoContainer}>
                     <Image
                         alt="The New Pork Times Logo"
                         src={logo}>
@@ -57,10 +57,9 @@ export default function Header() {
                     </ul>
                 </div>
                 <div className={styles.hamburger} onClick={() => toggleMenu()}>
-                    <Hamburger />
+                    <Hamburger menuOpen={menuOpen}/>
                 </div>
             </div>
-
             <style jsx>{`
                 .navContainer {
                     box-shadow: ${menuOpen ? '0px 0px 16px 2px black' : '0px 0px 0px 0px black'};
