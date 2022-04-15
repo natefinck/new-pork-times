@@ -1,44 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/header.module.scss'
 import Image from 'next/image'
 import logo from '../images/logo.png'
-import Link from 'next/link'
-import Hamburger from './hamburgerMenu'
+import SideNavPanel from './sideNavPanel'
+import Hamburger from '../components/hamburgerMenu'
+import onClickOutside from "react-onclickoutside";
 
-export default function Header() {
-
+function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
 
-    useEffect(() => {
-      console.log(menuOpen);
-    }, [menuOpen]);
-
-    const navLinks = [
-        {'displayText': 'Home', 'href': '/'},
-        {'displayText': 'World', 'href': '/'},
-        {'displayText': 'Business', 'href': '/'},
-        {'displayText': 'Politics', 'href': '/'},
-        {'displayText': 'U.S.', 'href': '/'},
-        {'displayText': 'Sports', 'href': '/'},
-        {'displayText': 'Health', 'href': '/'},
-        {'displayText': 'N.Y.', 'href': '/'},
-        {'displayText': 'Opinion', 'href': '/'},
-        {'displayText': 'Tech', 'href': '/'},
-        {'displayText': 'Science', 'href': '/'},
-        {'displayText': 'Art', 'href': '/'},
-        {'displayText': 'Books', 'href': '/'},
-        {'displayText': 'Style', 'href': '/'},
-        {'displayText': 'Food', 'href': '/'},
-        {'displayText': 'Travel', 'href': '/'},
-        {'displayText': 'Magazine', 'href': '/'},
-        {'displayText': 'Real Estate', 'href': '/'},
-        {'displayText': 'Obituaries', 'href': '/'},
-        {'displayText': 'Video', 'href': '/'}
-    ]
+    Header.handleClickOutside = () => {
+        setMenuOpen(false);
+    };
 
     return (
         <>
@@ -49,15 +26,15 @@ export default function Header() {
                         src={logo}>
                     </Image>
                 </div>
-                <div className={`${styles.navContainer} navContainer`}>
-                    <ul>
-                        {navLinks.map((l) => 
-                            <li><Link href={l.href}><a>{l.displayText}</a></Link></li>
-                        )}
-                    </ul>
+                <div className={`${styles.navContainer} navContainer`} onClick={() => setMenuOpen(false)}>
+                    <SideNavPanel setmenuopen={setMenuOpen}/>
                 </div>
-                <div className={styles.hamburger} onClick={() => toggleMenu()}>
-                    <Hamburger menuOpen={menuOpen}/>
+                <div
+                className={styles.hamburger}
+                onClick={() => {
+                        toggleMenu(true)
+                }}>
+                    <Hamburger menuopen={menuOpen}/>
                 </div>
             </div>
             <style jsx>{`
@@ -70,3 +47,9 @@ export default function Header() {
         </>
     )
 }
+
+const clickOutsideConfig = {
+    handleClickOutside: () => Header.handleClickOutside,
+  };
+
+export default onClickOutside(Header, clickOutsideConfig);
