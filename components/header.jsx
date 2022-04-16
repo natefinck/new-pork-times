@@ -59,8 +59,7 @@ function Header() {
     {'displayText': 'Travel', 'href': '/'},
     {'displayText': 'Magazine', 'href': '/'},
     {'displayText': 'Real Estate', 'href': '/'},
-    {'displayText': 'Obituaries', 'href': '/'},
-    {'displayText': 'Video', 'href': '/'}
+    {'displayText': 'Obituaries', 'href': '/'}
 ]
 
     return (
