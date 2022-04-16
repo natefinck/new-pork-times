@@ -5,6 +5,7 @@ import logo from '../images/logo.png'
 import SideNavPanel from './sideNavPanel'
 import Hamburger from '../components/hamburgerMenu'
 import onClickOutside from "react-onclickoutside";
+import Link from 'next/link'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,12 +21,14 @@ function Header() {
     return (
         <>
             <div className={styles.headerContainer}>
-            <div className={styles.logoContainer}>
+            <Link href="/">
+                <div className={styles.logoContainer}>
                     <Image
                         alt="The New Pork Times Logo"
                         src={logo}>
                     </Image>
                 </div>
+            </Link>
                 <div className={`${styles.navContainer} navContainer`} onClick={() => setMenuOpen(false)}>
                     <SideNavPanel setmenuopen={setMenuOpen}/>
                 </div>

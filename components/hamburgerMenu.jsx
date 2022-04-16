@@ -1,7 +1,6 @@
 import { Fade } from 'hamburger-react'
 
 export default function Hamburger(props) {
-    console.log(props)
     return (
         <>
             <div className='menuContainer'>
