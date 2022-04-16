@@ -1,5 +1,4 @@
 .headerContainer {
-    height: 65px;
     border-bottom: 1px solid var(--main-middle-gray);
     padding: 1rem 3vw;
     width: 100%;
@@ -8,15 +7,13 @@
     z-index: 1;
     top: 0;
     background-color: var(--main-background);
-
-    display: flex;
-    justify-content: space-between;
 }
 
 .logoContainer {
     width: 25%;
     margin: 0 auto;
     cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 .navContainer {
@@ -30,7 +27,6 @@
     width: 20%;
 
     ul {
-        list-style: none;
         margin: 0;
         padding: 3rem 1rem;
 
@@ -38,6 +34,21 @@
             padding: 0.2rem 0;
             font-size: 1rem;
             font-weight: 700;
+        }
+    }
+}
+
+.bottomBar {
+    width: 100%;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+
+    ul {
+        display: flex;
+        font-size: 12pt;
+
+        li {
+            padding: .3rem;
         }
     }
 }

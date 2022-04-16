@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/header.module.scss'
 import Image from 'next/image'
 import logo from '../images/logo.png'
@@ -6,9 +6,11 @@ import SideNavPanel from './sideNavPanel'
 import Hamburger from '../components/hamburgerMenu'
 import onClickOutside from "react-onclickoutside";
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [home, setHome] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -18,19 +20,62 @@ function Header() {
         setMenuOpen(false);
     };
 
+    const router = useRouter()
+    useEffect(() => {
+      const handleRouteChange = (url) => {
+        if (url === '/') setHome(true)
+        else setHome(false);
+      }
+  
+      router.events.on('routeChangeStart', handleRouteChange)
+  
+      // If the component is unmounted, unsubscribe
+      // from the event with the `off` method:
+      return () => {
+        router.events.off('routeChangeStart', handleRouteChange)
+      }
+    }, [])
+
+    useEffect(() => {
+        console.log(home)
+      }, [home])
+
+    const navLinks = [
+    {'displayText': 'Home', 'href': '/'},
+    {'displayText': 'World', 'href': '/'},
+    {'displayText': 'Business', 'href': '/'},
+    {'displayText': 'Politics', 'href': '/'},
+    {'displayText': 'U.S.', 'href': '/'},
+    {'displayText': 'Sports', 'href': '/'},
+    {'displayText': 'Health', 'href': '/'},
+    {'displayText': 'N.Y.', 'href': '/'},
+    {'displayText': 'Opinion', 'href': '/'},
+    {'displayText': 'Tech', 'href': '/'},
+    {'displayText': 'Science', 'href': '/'},
+    {'displayText': 'Art', 'href': '/'},
+    {'displayText': 'Books', 'href': '/'},
+    {'displayText': 'Style', 'href': '/'},
+    {'displayText': 'Food', 'href': '/'},
+    {'displayText': 'Travel', 'href': '/'},
+    {'displayText': 'Magazine', 'href': '/'},
+    {'displayText': 'Real Estate', 'href': '/'},
+    {'displayText': 'Obituaries', 'href': '/'},
+    {'displayText': 'Video', 'href': '/'}
+]
+
     return (
         <>
             <div className={styles.headerContainer}>
-            <Link href="/">
-                <div className={styles.logoContainer}>
-                    <Image
-                        alt="The New Pork Times Logo"
-                        src={logo}>
-                    </Image>
-                </div>
-            </Link>
+                <Link href="/">
+                    <div className={`${styles.logoContainer} logoContainer`}>
+                        <Image
+                            alt="The New Pork Times Logo"
+                            src={logo}>
+                        </Image>
+                    </div>
+                </Link>
                 <div className={`${styles.navContainer} navContainer`} onClick={() => setMenuOpen(false)}>
-                    <SideNavPanel setmenuopen={setMenuOpen}/>
+                    <SideNavPanel navLinks={navLinks}/>
                 </div>
                 <div
                 className={styles.hamburger}
@@ -39,12 +84,31 @@ function Header() {
                 }}>
                     <Hamburger menuopen={menuOpen}/>
                 </div>
+                <div className={`${styles.bottomBar} bottomBar`}>
+                    {/* <ul>
+                        {navLinks.map((l, i) => 
+                            <li key={l.displayText}>
+                                <Link href={l.href}>
+                                    <a>{l.displayText}</a>
+                                </Link>
+                            </li>
+                        )}
+                    </ul> */}
+                </div>
             </div>
             <style jsx>{`
                 .navContainer {
                     box-shadow: ${menuOpen ? '0px 0px 16px 2px black' : '0px 0px 0px 0px black'};
                     transform: ${menuOpen ? 'translateX(0%)' : 'translateX(-100%)'};
                     transition: ${menuOpen ? 'all .3s cubic-bezier(0, 0.65, 0.58, 1)' : 'all .25s cubic-bezier(0.68, -0.06, 0.48, 0.99)'};
+                }
+
+                .logoContainer {
+                    width: ${home ? '40%' : '25%'};
+                }
+
+                .bottomBar {
+                    height: ${home ? '40px' : '0px'};
                 }
             `}</style>
         </>
