@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [home, setHome] = useState(false);
+    const [home, setHome] = useState(true);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -36,9 +36,9 @@ function Header() {
       }
     }, [])
 
-    useEffect(() => {
-        console.log(home)
-      }, [home])
+    // useEffect(() => {
+    //     console.log(home)
+    //   }, [home])
 
     const navLinks = [
     {'displayText': 'Home', 'href': '/'},
@@ -66,35 +66,38 @@ function Header() {
     return (
         <>
             <div className={styles.headerContainer}>
-                <Link href="/">
-                    <div className={`${styles.logoContainer} logoContainer`}>
-                        <Image
-                            alt="The New Pork Times Logo"
-                            src={logo}>
-                        </Image>
+                <div className={`${styles.header} header`}>
+                    <Link href="/">
+                        <div className={`${styles.logoContainer} logoContainer`}>
+                            <Image
+                                alt="The New Pork Times Logo"
+                                src={logo}>
+                            </Image>
+                        </div>
+                    </Link>
+                    <div className={`${styles.navContainer} navContainer`} onClick={() => setMenuOpen(false)}>
+                        <SideNavPanel navLinks={navLinks}/>
                     </div>
-                </Link>
-                <div className={`${styles.navContainer} navContainer`} onClick={() => setMenuOpen(false)}>
-                    <SideNavPanel navLinks={navLinks}/>
+                    <div
+                    className={styles.hamburger}
+                    onClick={() => {
+                            toggleMenu(true)
+                    }}>
+                        <Hamburger menuopen={menuOpen}/>
+                    </div>
+                    {/* <div className={`${styles.bottomBar} bottomBar`}>
+                        <ul>
+                            {navLinks.map((l, i) => 
+                                <li key={l.displayText}>
+                                    <Link href={l.href}>
+                                        <a>{l.displayText}</a>
+                                    </Link>
+                                </li>
+                            )}
+                        </ul>
+                    </div> */}
                 </div>
-                <div
-                className={styles.hamburger}
-                onClick={() => {
-                        toggleMenu(true)
-                }}>
-                    <Hamburger menuopen={menuOpen}/>
-                </div>
-                <div className={`${styles.bottomBar} bottomBar`}>
-                    {/* <ul>
-                        {navLinks.map((l, i) => 
-                            <li key={l.displayText}>
-                                <Link href={l.href}>
-                                    <a>{l.displayText}</a>
-                                </Link>
-                            </li>
-                        )}
-                    </ul> */}
-                </div>
+                <div className={`${styles.bottomNavBorder} bottomNavBorder`} />
             </div>
             <style jsx>{`
                 .navContainer {
@@ -103,12 +106,29 @@ function Header() {
                     transition: ${menuOpen ? 'all .3s cubic-bezier(0, 0.65, 0.58, 1)' : 'all .25s cubic-bezier(0.68, -0.06, 0.48, 0.99)'};
                 }
 
+                .header {
+                    padding-bottom: ${home ? 'intial' : '.3rem'}
+                }
+
                 .logoContainer {
-                    width: ${home ? '40%' : '25%'};
+                    width: ${home ? '40%' : '30%'};
                 }
 
                 .bottomBar {
                     height: ${home ? '40px' : '0px'};
+                }
+
+                .bottomNavBorder {
+                    opacity: ${home ? '1' : '0'};
+                    height: ${home ? '4px' : '0px'}
+                    // border-top: ${home ? '1px solid var(--main-black)' : 0};
+                    // border-bottom: ${home ? '1px solid var(--main-black)' : 0};
+                }
+
+                @media only screen and (max-width: 767px) {
+                    .logoContainer {
+                        width: ${home ? '60%' : '50%'};
+                    }
                 }
             `}</style>
         </>

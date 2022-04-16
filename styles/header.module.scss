@@ -1,16 +1,19 @@
-.headerContainer {
-    border-bottom: 1px solid var(--main-middle-gray);
+.header {
     padding: 1rem 3vw;
-    width: 100%;
+    margin: 0 auto;
+    transition: all .3s cubic-bezier(0, 0.65, 0.58, 1)
+}
 
+.headerContainer {
+    background-color: var(--main-background);
     position: fixed;
     z-index: 1;
     top: 0;
-    background-color: var(--main-background);
+    width: 100%;
+    padding: 0 10%;
 }
 
 .logoContainer {
-    width: 25%;
     margin: 0 auto;
     cursor: pointer;
     transition: all .3s ease-in-out;
@@ -24,7 +27,7 @@
 
     height: 100vh;
     background-color: var(--main-background);
-    width: 20%;
+    width: 15rem;
 
     ul {
         margin: 0;
@@ -53,20 +56,34 @@
     }
 }
 
+.bottomNavBorder {
+    transition: all .3s cubic-bezier(0, 0.65, 0.58, 1);
+    border-top: 1px solid var(--main-black);
+    border-bottom: 1px solid var(--main-black);
+}
+
 @media only screen and (max-width: 767px) {
     .logoContainer {
-        width: 40%;
         margin: 0;
     }
 
-    .headerContainer {
+    .header {
         justify-content: right;
+        display: flex;
     }
+
+    .headerContainer {
+        padding: 0;
+    }
+
+    // .header {
+    //     margin: 0;
+    // }
 }
 
 @media only screen and (max-width: 600px) {
     .logoContainer {
-        width: 60%;
+
     }
 
     .navContainer {
