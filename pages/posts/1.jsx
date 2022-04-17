@@ -1,4 +1,3 @@
-import Header from '../../components/header'
 import articleStyles from '../../styles/article.module.scss'
 import Image from 'next/image'
 import img1 from '../../images/blog1/corn.jpeg'
