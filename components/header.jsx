@@ -26,19 +26,11 @@ function Header() {
         if (url === '/') setHome(true)
         else setHome(false);
       }
-  
       router.events.on('routeChangeStart', handleRouteChange)
-  
-      // If the component is unmounted, unsubscribe
-      // from the event with the `off` method:
       return () => {
         router.events.off('routeChangeStart', handleRouteChange)
       }
     }, [])
-
-    // useEffect(() => {
-    //     console.log(home)
-    //   }, [home])
 
     const navLinks = [
     {'displayText': 'Home', 'href': '/'},

@@ -2,17 +2,16 @@ import React from 'react';
 import Link from 'next/link'
 
 export default function sideNavPanel({navLinks}) {
-
     return (
         <>
             <div className='sideNavPanelContainer'>
                 <ul>
                     {navLinks.map((l) => 
-                        <li key={l.displayText}>
-                            <Link href={l.href}>
+                        <Link href={l.href}>
+                            <li key={l.displayText} className="links">
                                 <a>{l.displayText}</a>
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
                     )}
                 </ul>
             </div>
@@ -20,6 +19,10 @@ export default function sideNavPanel({navLinks}) {
                 .sideNavPanelContainer {
                     margin-top: 3rem;
                     overflow: scroll;
+                }
+
+                .links {
+                    cursor: pointer;
                 }
             `}</style>
         </>
