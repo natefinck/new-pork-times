@@ -13,7 +13,7 @@ export default function FirstPost() {
                     </h1>
                     <div className={articleStyles.summaryContainer}>
                         <div className={articleStyles.headImage}>
-                            <Image src={img1}></Image>
+                            <Image src={img1} alt="corn image"></Image>
                         </div>
                         <div className={articleStyles.content}>
                             Food or fuel? Food companies are waging a battle in the fields, in laboratories and in the halls of government over how to use corn as demand for the grain and other food ingredients surges for use in ethanol and other biofuels.
@@ -38,11 +38,11 @@ export default function FirstPost() {
 
                     <p>As the tug of war over how to use corn intensifies, food industry executives say economic fundamentals are shifting.</p>
 
-                    <p>"We really do look at it right now as a systemic change," said Jeff Ettinger, chairman and chief executive officer of Hormel Foods Corp. HRL.N</p>
+                    <p>&quotWe really do look at it right now as a systemic change,&quot said Jeff Ettinger, chairman and chief executive officer of Hormel Foods Corp. HRL.N</p>
 
                     <p>In the court of public opinion and at legislatures in Washington and Europe, the companies are pushing the debate over whether crops now used for food should be diverted toward fuel, and whether government should use tax dollars to subsidize the shift.</p>
 
-                    <p>"There is definitely going to be a public debate, in my mind, over corn for food versus corn for fuel," said Richard Bond, chief executive of meat processor Tyson Foods Inc. TSN.N</p>
+                    <p>&quotThere is definitely going to be a public debate, in my mind, over corn for food versus corn for fuel,&quot said Richard Bond, chief executive of meat processor Tyson Foods Inc. TSN.N</p>
 
                     <p>In Washington, that debate could take place later this year, when Congress debates the five-year farm policy bill, which sets subsidies on crops like corn, wheat and soybeans.</p>
 
@@ -60,17 +60,17 @@ export default function FirstPost() {
 
                     <p>In Europe and elsewhere, governments are pushing industry to develop biofuels -- mainly produced from grains, sugar and vegetables -- as a way to stem global warming.</p>
 
-                    <p>Anglo-Dutch foodmaker Unilever NV UNc.ASULVR.L advocates spending government money on "second generation" biofuels that could be made from waste products, grass and other items not used in food.</p>
+                    <p>Anglo-Dutch foodmaker Unilever NV UNc.ASULVR.L advocates spending government money on &quotsecond generation&quot biofuels that could be made from waste products, grass and other items not used in food.</p>
 
                     <p>Unilever wants to use edible oils for fuel, according to Alan Jope, global foods vice president.</p>
 
-                    <p>“We are quite active to make sure that legislation that’s put in place around biofuels takes a responsible approach,” Jope said.</p>
+                    <p>“We are quite active to make sure that legislation that&aposs put in place around biofuels takes a responsible approach,” Jope said.</p>
 
                     <p>Food companies are also working in the lab to find substitute ingredients for corn and other grains.</p>
 
                     <p>H.J. Heinz Co. HNZ.N Chairman and Chief Executive William Johnson said a new natural sweetener will likely be developed in the next few years to replace high fructose corn syrup and sugar, the two sweeteners used in its ketchup.</p>
 
-                    <p>Developing seeds that produce higher crop yields and planting field that are currently dormant in the United States could also ease supply constraints, Hormel's Ettinger said.</p>
+                    <p>Developing seeds that produce higher crop yields and planting field that are currently dormant in the United States could also ease supply constraints, Hormel&aposs Ettinger said.</p>
 
                     <p>Meanwhile, food companies have passed on rising corn and other costs to consumers by raising prices.</p>
 

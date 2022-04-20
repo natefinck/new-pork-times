@@ -1,40 +1,19 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .main {
   padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.title a {
-    color: #0070f3 !important;
-    text-decoration: none;
-  }
+.mainHeadline {
 
-  .title a:hover,
-  .title a:focus,
-  .title a:active {
-    text-decoration: underline;
-  }
+}
 
-  .title {
-    margin: 0;
-    line-height: 1.15;
-    font-size: 4rem;
-  }
+.mainTitle {
+  font-family: 'Merriweather', serif;
 
-  .title,
-  .description {
-    text-align: center;
-  }
-
+  text-align: center;
+  font-size: .8rem;
+}

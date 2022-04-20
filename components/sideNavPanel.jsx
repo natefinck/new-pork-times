@@ -7,8 +7,8 @@ export default function sideNavPanel({navLinks}) {
             <div className='sideNavPanelContainer'>
                 <ul>
                     {navLinks.map((l) => 
-                        <Link href={l.href}>
-                            <li key={l.displayText} className="links">
+                        <Link key={l.displayText} href={l.href}>
+                            <li className="links">
                                 <a>{l.displayText}</a>
                             </li>
                         </Link>
