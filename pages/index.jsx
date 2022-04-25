@@ -17,7 +17,7 @@ export default function Home() {
           </div> */}
           <div className={`${styles.mainContent} mainContent`}>
             <div className={`${styles.main1h} main1h`}>
-              <div className={`${styles.main1htitle} main1htitle`}>
+              <div className={`${styles.main1htitle} ${styles.articleContainer} main1htitle`}>
                 <h1>
                   Ukrainian Forces in Mariupol Appeal for Help in Last Stand
                 </h1>
@@ -37,8 +37,21 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+            <div className={`${styles.main1himage} ${styles.articleContainer} main1himage`}>
+              <Image alt="Image of Poke" src={poke}></Image>
+            </div>
             <div
-              className={`${styles.main2h} ${styles.main2h1} ${styles.borderBottom} main2h`}
+              className={`${styles.main3h} ${styles.main3h1} ${styles.borderBottom} ${styles.articleContainer} main3h`}
+            >
+              <div className={`${styles.main3htitle} main3htitle`}>
+                <h3>
+                  Civilians who escaped the besieged steel plant in Mariupol
+                  described a harrowing life underground.
+                </h3>
+              </div>
+            </div>
+            <div
+              className={`${styles.main2h} ${styles.articleContainer} ${styles.main2h1} ${styles.borderBottom} main2h`}
             >
               <div className={`${styles.main2htitle} main2htitle`}>
                 <h2>Best Salmon Recipes for Weeknight Dinners</h2>
@@ -50,7 +63,7 @@ export default function Home() {
                 best salmon recipes for an easy weeknight dinner.
               </div>
             </div>
-            <div className={`${styles.main2h} ${styles.main2h2} main2h`}>
+            <div className={`${styles.main2h} ${styles.articleContainer} ${styles.main2h2} main2h`}>
               <div className={`${styles.main2htitle} main2htitle`}>
                 <h2>The Pour - 12 Natural Wines to Drink Now</h2>
               </div>
@@ -63,26 +76,13 @@ export default function Home() {
                 Others are curious about wines made outside the norm
               </div>
             </div>
-            <div
-              className={`${styles.main3h} ${styles.main3h1} ${styles.borderBottom} main3h`}
-            >
-              <div className={`${styles.main3htitle} main3htitle`}>
-                <h3>
-                  Civilians who escaped the besieged steel plant in Mariupol
-                  described a harrowing life underground.
-                </h3>
-              </div>
-            </div>
-            <div className={`${styles.main3h} ${styles.main3h2} main3h`}>
+            <div className={`${styles.main3h} ${styles.articleContainer} ${styles.main3h2} main3h`}>
               <div className={`${styles.main3htitle} main3htitle`}>
                 <h3>
                   Under Russian bombardment, a Ukrainian commander in Mariupol
                   said that his forces may have only hours left.
                 </h3>
               </div>
-            </div>
-            <div className={`${styles.main1himage} main1himage`}>
-              <Image alt="Image of Poke" src={poke}></Image>
             </div>
           </div>
         </div>
