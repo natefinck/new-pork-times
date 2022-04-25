@@ -4,7 +4,9 @@
   font-family: 'Merriweather', serif;
   font-size: .8rem;
 
-  h1:hover, h2:hover, h3:hover {
+  h1:hover,
+  h2:hover,
+  h3:hover {
     color: var(--main-dark-gray);
   }
 }
@@ -17,9 +19,7 @@
   padding: 5rem 0;
 }
 
-.mainHeadline {
-
-}
+.mainHeadline {}
 
 .mainTitle {
   text-align: center;
@@ -58,16 +58,24 @@
 }
 
 .main2h {
-  grid-column: 16 / 21;
-  grid-row: 1;
 
   .main2htitle {
     font-size: .7rem;
-    
+
     h2 {
       margin-top: 0;
     }
   }
+}
+
+.main2h1 {
+  grid-column: 16 / 21;
+  grid-row: 1;
+}
+
+.main2h2 {
+  grid-column: 6 / 16;
+  grid-row: 2;
 }
 
 .main3h {
@@ -89,11 +97,17 @@
 
 .main1himage {
   grid-column: 6/16;
-  grid-row: 1 / 4;
+  grid-row: 1;
 
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
   .container {
     width: 95%;
   }
