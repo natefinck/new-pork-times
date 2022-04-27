@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/index.module.scss";
 import poke from "../images/poke.jpeg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,9 +21,11 @@ export default function Home() {
               <div
                 className={`${styles.main1htitle} ${styles.articleContainer} main1htitle`}
               >
-                <h1>
-                  Ukrainian Forces in Mariupol Appeal for Help in Last Stand
-                </h1>
+                <Link href={"/posts/1"}>
+                  <h1>
+                    Ukrainian Forces in Mariupol Appeal for Help in Last Stand
+                  </h1>
+                </Link>
               </div>
               <div className={`${styles.main1hul} main1hul`}>
                 <ul className={`${styles.subtext}`}>
