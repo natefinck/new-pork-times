@@ -17,7 +17,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .mainHeadline {
@@ -56,6 +56,10 @@
 
   .main1htitle {
     font-size: .7rem;
+
+    h1 {
+      margin: 0;
+    }
   }
 
   ul {
@@ -164,7 +168,9 @@
     grid-row: 3;
   }
 
-  .main2h2, .main3h1, .main3h2 {
+  .main2h2,
+  .main3h1,
+  .main3h2 {
     grid-row: 4;
   }
 
@@ -179,7 +185,8 @@
     display: none;
   }
 
-  .main2h, .main3h1 {
+  .main2h,
+  .main3h1 {
     border-bottom: 1px solid var(--main-middle-gray);
   }
 }
