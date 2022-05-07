@@ -30,7 +30,7 @@ export default function Headline() {
                 </Link>
               </div>
               <div className={`${headline1styles.main1hul} main1hul`}>
-                <ul className={`${headline1styles.subtext}`}>
+                <ul className={`${styles.subtext}`}>
                   <li>
                     The two sides traded artillery barrages as Russia tried to
                     pierce the defenses of dug-in Ukrainian fighters.
