@@ -1,11 +1,14 @@
-.headlineContainer {
+.mainContent {
 
     h1:hover,
     h2:hover,
     h3:hover {
         color: var(--main-dark-gray);
-        cursor: pointer;
     }
+}
+
+.link {
+    cursor: pointer;
 }
 
 .borderBottom {
