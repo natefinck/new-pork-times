@@ -1,15 +1,14 @@
 import React from "react";
 import styles from "../styles/index.module.scss";
-import poke from "../images/poke.jpeg";
-import Image from "next/image";
-import Link from "next/link";
-import Headline from "../components/headline";
+import Headline1 from "../components/headline1";
+import Headline2 from "../components/headline2";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <Headline />
+        <Headline1/>
+        <Headline2/>
       </main>
     </div>
   );
