@@ -34,24 +34,15 @@ function Header() {
 
   const navLinks = [
     { displayText: "Home", href: "/" },
-    { displayText: "World", href: "/" },
-    { displayText: "Business", href: "/" },
-    { displayText: "Politics", href: "/" },
     { displayText: "U.S.", href: "/" },
-    { displayText: "Sports", href: "/" },
+    { displayText: "New York", href: "/" },
     { displayText: "Health", href: "/" },
-    { displayText: "N.Y.", href: "/" },
-    { displayText: "Opinion", href: "/" },
-    { displayText: "Tech", href: "/" },
-    { displayText: "Science", href: "/" },
-    { displayText: "Art", href: "/" },
-    { displayText: "Books", href: "/" },
-    { displayText: "Style", href: "/" },
-    { displayText: "Food", href: "/" },
-    { displayText: "Travel", href: "/" },
-    { displayText: "Magazine", href: "/" },
-    { displayText: "Real Estate", href: "/" },
-    { displayText: "Obituaries", href: "/" },
+    { displayText: "Keto", href: "/" },
+    { displayText: "Wine", href: "/" },
+    { displayText: "Beer", href: "/" },
+    { displayText: "Cocktails", href: "/" },
+    { displayText: "Restaurant Reviews", href: "/" },
+    { displayText: "Fast Food", href: "/" },
   ];
 
   return (
@@ -77,17 +68,17 @@ function Header() {
           >
             <Hamburger menuopen={menuOpen} />
           </div>
-          {/* <div className={`${styles.bottomBar} bottomBar`}>
-                        <ul>
-                            {navLinks.map((l, i) => 
-                                <li key={l.displayText}>
-                                    <Link href={l.href}>
-                                        <a>{l.displayText}</a>
-                                    </Link>
-                                </li>
-                            )}
-                        </ul>
-                    </div> */}
+          <div className={`${styles.bottomBar} bottomBar`}>
+            <ul>
+              {navLinks.map((l, i) => (
+                <li key={l.displayText}>
+                  <Link href={l.href}>
+                    <a>{l.displayText}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className={`${styles.bottomNavBorder} bottomNavBorder`} />
       </div>
@@ -103,7 +94,7 @@ function Header() {
         }
 
         .header {
-          padding-bottom: ${home ? "intial" : ".3rem"};
+          padding-bottom: ${home ? "initial" : ".3rem"};
         }
 
         .logoContainer {
@@ -111,7 +102,7 @@ function Header() {
         }
 
         .bottomBar {
-          height: ${home ? "40px" : "0px"};
+          height: ${home ? "initial" : "0px"};
         }
 
         .bottomNavBorder {
