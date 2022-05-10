@@ -48,14 +48,14 @@
 }
 
 .bottomBar {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     overflow: hidden;
     transition: all .3s ease-in-out;
 
     ul {
         display: flex;
         font-size: 12pt;
-        width: 80%;
         margin: 0 auto;
         padding: 0;
 

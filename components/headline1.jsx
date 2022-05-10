@@ -17,7 +17,9 @@ export default function Headline1() {
           {/* <div className={`${styles.mainTitle} mainTitle`}>
             <h1>Ukraine and Russia Trade Strikes Along Eastern Front</h1>
           </div> */}
-          <div className={`${styles.mainContent} mainContent`}>
+          <div
+            className={`${styles.mainContent} ${headline1styles.mainContent} mainContent`}
+          >
             <Link href={"/posts/1"}>
               <div
                 className={`${headline1styles.main1h} ${styles.link} main1h`}
